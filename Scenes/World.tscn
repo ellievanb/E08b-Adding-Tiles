@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/paddle.gd" type="Script" id=1]
 [ext_resource path="res://Assets/paddle.png" type="Texture" id=2]
 [ext_resource path="res://Assets/ball.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Tile.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 53.311, 12.2888 )
@@ -51,3 +52,25 @@ shape = SubResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 polygon = PoolVector2Array( 0, 640, 0, 0, 1024, 0, 1024, 640, 1088, 640, 1088, -64, -64, -64, -64, 640, 0, 640 )
+
+[node name="Tiles" type="Node" parent="."]
+
+[node name="Gray Tiles" type="Node" parent="Tiles"]
+
+[node name="Tile" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile2" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile3" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile4" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile5" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile6" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile7" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile8" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
+
+[node name="Tile9" parent="Tiles/Gray Tiles" instance=ExtResource( 4 )]
